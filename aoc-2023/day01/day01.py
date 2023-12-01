@@ -30,6 +30,7 @@ def find_digit(input, is_reverse = False):
         char = input[index] if is_reverse is False else input[len(input)-index-1]
         if char.isdigit():
             return char
+        # added for part two:
         sub_str = input[:index+1] if is_reverse is False else input[len(input)-index-1:]
         for key in translation_map.keys():
             if key in sub_str:
